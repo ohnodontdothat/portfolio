@@ -265,10 +265,14 @@ $(function () {
     let i = $(this).index();
     $(".modal_box").addClass("on");
     $(".modal").eq(i).addClass("on");
+    $("body").css({ overflow: "hidden" });
+    $(window).off("mousewheel");
   });
   $("#close_1").on("click", function () {
     $(".modal_box").removeClass("on");
     $(".modal").eq(i).removeClass("on");
+    $("body").css({ overflow: "" });
+    mousewheel();
   });
 
   //*con3_modal*/
