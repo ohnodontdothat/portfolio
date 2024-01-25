@@ -866,9 +866,7 @@ span {
   .con3.on .de_bg:nth-of-type(5) img {
     transition-delay: 1.7s;
   }
-  .con3.on .de_bg:nth-of-type(6) img {
-    transition-delay: 2s;
-  }
+
   .de_bg.active {
     transition: left 0.5s, top 0.5s;
   }
@@ -1087,6 +1085,59 @@ span {
   }
   .con4.on .con4_inner p:nth-of-type(3) {
     transition-delay: 3s;
+  }
+}
+/*******************************************/
+@media all and (min-width: 1513px) {
+  .navi {
+    left: 50%;
+    top: 2.8%;
+  }
+  .design_wrap {
+    height: 100%;
+  }
+  .con3_inner .de_bg {
+    width: 20rem;
+  }
+  .con3_inner h2:nth-of-type(2) {
+    bottom: -5%;
+  }
+  .con3_inner .de_modal {
+    height: 1024px;
+  }
+  .con3_inner .modal_wrap {
+    width: 70%;
+    height: 70%;
+    top: 37%;
+  }
+  .con3_inner .de_modal #arrows {
+    width: 100vw;
+    justify-content: space-between;
+    top: 40%;
+  }
+  .con3_inner .de_modal #arrows span {
+    width: 3%;
+    font-size: 30px;
+    margin: 0;
+  }
+  .con3_inner .div_wrap {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .con3_inner .div_wrap .mo_bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .con3_inner .mo_text > p {
+    margin-bottom: 1rem;
+  }
+  .con3_inner .mo_text img {
+    width: 35%;
+  }
+  .con3_inner .poster img {
+    width: 34%;
   }
 }
 /*******************************************/
@@ -1531,6 +1582,13 @@ span {
     margin: 0vh auto 1vh;
     width: 85%;
   }
+  .con2_inner .works {
+    flex-direction: column;
+    margin: 3rem auto;
+  }
+  .con2_inner .work {
+    width: 80%;
+  }
   .con2_inner .works img {
     width: 90%;
   }
@@ -1544,13 +1602,13 @@ span {
     transform: translateY(-140%);
   }
   .con2.on .work_1 {
-    transform: translateY(35%);
+    transform: translateY(0%);
   }
   .con2.on .work_2 {
-    transform: translateY(20%);
+    transform: translateY(0%);
   }
   .con2.on .work_3 {
-    transform: translateY(-5%);
+    transform: translateY(0%);
   }
   .con2_inner .work {
     height: auto;
@@ -1563,11 +1621,11 @@ span {
   }
   .con2_inner .works p {
     width: 90%;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .con2_inner .work_btn span {
-    width: 10vw;
-    font-size: 0.7rem;
+    width: 15vw;
+    font-size: 0.9rem;
     margin: 1vw;
   }
   /*con3*/
@@ -1615,12 +1673,6 @@ span {
   }
   .con3_inner h2:nth-of-type(2) {
     bottom: 0%;
-  }
-  .swiper-pagination {
-    display: block;
-    width: 0.5rem;
-    height: 0.5rem;
-    bottom: 23% !important;
   }
 
   /*con4*/
@@ -1852,12 +1904,7 @@ span {
   .con3_inner h2:nth-of-type(2) {
     bottom: 3%;
   }
-  .swiper-pagination {
-    display: block;
-    width: 0.5rem;
-    height: 0.5rem;
-    bottom: 23% !important;
-  }
+
   .con3_inner .modal_wrap {
     width: 70%;
     height: 60%;

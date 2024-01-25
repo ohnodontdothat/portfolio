@@ -262,7 +262,7 @@ $(function () {
 
   /*con2_modal*/
   $(".pp").on("click", function () {
-    let i = $(this).index();
+    let i = $(this).closest(".works").find(".pp").index(this);
     $(".modal_box").addClass("on");
     $(".modal").eq(i).addClass("on");
     $("body").css({ overflow: "hidden" });
@@ -270,7 +270,7 @@ $(function () {
   });
   $("#close_1").on("click", function () {
     $(".modal_box").removeClass("on");
-    $(".modal").eq(i).removeClass("on");
+    $(".modal").removeClass("on");
     $("body").css({ overflow: "" });
     mousewheel();
   });
