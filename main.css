@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: "Silk-Serif";
   src: url("silk-serif/Silk_Serif_Regular_Italic.otf") format("OpenType");
