@@ -160,8 +160,6 @@ $(function () {
       //con4 마지막 부분 해당
       $(window).scrollTop() >= $(".con4").offset().top
     ) {
-      // $(".navi").hide();
-      // $(".bars").show();
       $("#header").addClass("active");
       $(".bar").css({ backgroundColor: "#111" });
       $(".navi_bar>div").removeClass("on");
@@ -272,7 +270,9 @@ $(function () {
     $(".modal_box").removeClass("on");
     $(".modal").removeClass("on");
     $("body").css({ overflow: "" });
-    mousewheel();
+    if ($(window).width() > 431) {
+      mousewheel();
+    }
   });
 
   //*con3_modal*/
@@ -324,12 +324,11 @@ $(function () {
   let resize = function () {
     $(window).on("resize", function () {
       winsize = window.innerWidth;
-      console.log("resize 중");
       if (winsize > 1520) {
         mousescroll();
         drag();
       } else if (winsize < 431) {
-        $(window).off("mousewheel");
+        $(window).off("mousewheel DOMMouseScroll");
       }
     });
     /*resize 이벤트 끝*/

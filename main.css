@@ -1858,6 +1858,9 @@ span {
   .con2_inner .mouse {
     display: none;
   }
+  .con2 .modal {
+    width: 85%;
+  }
   /*con3*/
   .con3 {
     height: 70vh !important;
