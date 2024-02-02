@@ -590,6 +590,7 @@ span {
     top: 0;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
     display: none;
   }
   .modal_box.on {
@@ -600,7 +601,6 @@ span {
     min-width: 45%;
     height: 80%;
     max-height: 80%;
-    overflow: hidden;
     display: none;
     position: fixed;
     left: 50%;
@@ -690,6 +690,13 @@ span {
   .con2.on:after {
     transform: scale(35) translateZ(0);
     background-color: #f8f8f4;
+  }
+  .con2.on {
+    background-color: #f8f8f4;
+    transition: 1s;
+  }
+  .con2.on.after-hidden:after {
+    display: none;
   }
   /*con3*/
   .con3 .div_wrap {
@@ -1062,6 +1069,9 @@ span {
     display: inline-block;
     margin-right: 2em;
   }
+  .con4 .info_left p:nth-of-type(1) {
+    margin: 1rem 0rem;
+  }
   .con4 .info_right p:nth-of-type(1) {
     margin: 1rem 0rem;
   }
@@ -1086,6 +1096,9 @@ span {
   }
   .con4.on .con4_inner p:nth-of-type(3) {
     transition-delay: 3s;
+  }
+  .con4.on .con4_inner p:nth-of-type(3) {
+    transition-delay: 3.5s;
   }
 }
 /*******************************************/
@@ -1337,7 +1350,7 @@ span {
     padding: 7vh 0;
   }
   #header .navi {
-    display: flex;
+    display: none;
     top: 1.6%;
     left: 50%;
     transform: translateX(-50%);
@@ -1400,6 +1413,9 @@ span {
   .con2_inner .work_btn span {
     font-size: 1.1vw;
     margin: 1vw;
+  }
+  .con2 .modal {
+    width: 85%;
   }
   /*con3*/
   .con3 {
@@ -1628,6 +1644,9 @@ span {
     width: 15vw;
     font-size: 0.9rem;
     margin: 1vw;
+  }
+  .con2 .modal {
+    width: 85%;
   }
   /*con3*/
   .con3 {

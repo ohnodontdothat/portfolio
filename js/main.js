@@ -1,5 +1,6 @@
 $(function () {
   let i = 0;
+  let isModalOpen = false;
   /*bar효과*/
   $(".bars").on("click", function () {
     console.log(i);
@@ -43,13 +44,13 @@ $(function () {
       i = 0;
     }
   });
+
   /*마우스 휠 이벤트*/
   let mousescroll = function () {
     winsize = window.innerWidth;
     if (winsize > 1520) {
       var elm = "#wrap>div";
       $(elm).each(function (index) {
-        // 개별적으로 Wheel 이벤트 적용
         $(this).on("mousewheel DOMMouseScroll", function (e) {
           e.preventDefault();
           var delta = 0;
@@ -60,14 +61,12 @@ $(function () {
           } else if (event.detail) delta = -event.detail / 3;
           var moveTop = $(window).scrollTop();
           var elmSelecter = $(elm).eq(index);
-          // 마우스휠을 위에서 아래로
           if (delta < 0) {
             if ($(elmSelecter).next() != undefined) {
               try {
                 moveTop = $(elmSelecter).next().offset().top;
               } catch (e) {}
             }
-            // 마우스휠을 아래에서 위로
           } else {
             if ($(elmSelecter).prev() != undefined) {
               try {
@@ -90,11 +89,11 @@ $(function () {
             );
         });
       });
-    } else if ($(window).width() < 431) {
-      $(window).off("mousewheel");
+    } else {
+      $(this).off("mousewheel DOMMouseScroll");
     }
   };
-
+  mousescroll(true);
   /*마우스 휠 이벤트 끝*/
 
   /*on load 효과*/
@@ -136,6 +135,10 @@ $(function () {
       $(".bar").css({ backgroundColor: "#111" });
       $(".navi_bar>div").css({ backgroundColor: "#111!" });
       $(".con2").addClass("on");
+      $(".con2").addClass("on");
+      setTimeout(function () {
+        $(".con2.on").addClass("after-hidden");
+      }, 2000);
       $(".navi_bar>div").removeClass("on");
       $(".navi_bar>div:nth-of-type(3)").addClass("on");
       $(".navi a").removeClass("on");
@@ -208,10 +211,16 @@ $(function () {
       $(".bar").css({ backgroundColor: "#111" });
       $(".navi_bar>div").css({ backgroundColor: "#111" });
       $(".con2").addClass("on");
+      setTimeout(function () {
+        $(".con2.on").addClass("after-hidden");
+      }, 2000);
       $(".navi_bar>div").removeClass("on");
       $(".navi_bar>div:nth-of-type(3)").addClass("on");
       $(".navi a").removeClass("on");
       $(".navi a:nth-of-type(3)").addClass("on");
+      if (isModalOpen) {
+        $(window).scrollTop($(".con2").offset().top);
+      }
       if ($(window).width() < 431) {
         $(".con4").addClass("on");
         $(".con3").addClass("on");
@@ -262,17 +271,34 @@ $(function () {
   $(".pp").on("click", function () {
     let i = $(this).closest(".works").find(".pp").index(this);
     $(".modal_box").addClass("on");
+    $(".modal_box").on("wheel mousewheel DOMMouseScroll", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      return false;
+    });
     $(".modal").eq(i).addClass("on");
-    $("body").css({ overflow: "hidden" });
-    $(window).off("mousewheel");
+    $("html, body").css({ overflow: "hidden" });
+    $(window).off("mousewheel DOMMouseScroll");
+    $("html, body").off("mousewheel DOMMouseScroll");
+    mousescroll(false);
+    $(".modal")
+      .eq(i)
+      .on("mousewheel DOMMouseScroll", function (e) {
+        let delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+        let scrollTop = this.scrollTop;
+        this.scrollTop = scrollTop - delta;
+        e.preve;
+      });
+    $(window).scrollTop($(".con2").offset().top);
+    isModalOpen = true;
   });
   $("#close_1").on("click", function () {
     $(".modal_box").removeClass("on");
     $(".modal").removeClass("on");
-    $("body").css({ overflow: "" });
-    if ($(window).width() > 431) {
-      mousewheel();
-    }
+    $("html, body").css({ overflow: "auto" });
+    mousescroll(true);
+    isModalOpen = false;
+    $(".modal").off("mousewheel DOMMouseScroll");
   });
 
   //*con3_modal*/
@@ -328,7 +354,7 @@ $(function () {
         mousescroll();
         drag();
       } else if (winsize < 431) {
-        $(window).off("mousewheel DOMMouseScroll");
+        $(window).off("mousescroll");
       }
     });
     /*resize 이벤트 끝*/
