@@ -1102,7 +1102,7 @@ span {
   }
 }
 /*******************************************/
-@media all and (min-width: 1513px) {
+@media all and (max-width: 1901px) and (min-width: 1513px) {
   .navi {
     left: 50%;
     top: 2.8%;
