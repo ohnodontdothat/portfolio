@@ -1177,11 +1177,20 @@ span {
   }
   /*visual*/
   #visual {
-    height: auto;
+    height: 100vh;
+    min-height: 100vh;
   }
   #visual h2 {
-    transform: translateY(10vh);
+    transform: translateY(8vh);
     font-size: 6vw;
+  }
+  .ca_inner .before.on {
+    width: 30rem;
+    height: 30rem;
+  }
+  .ca_inner .after.on {
+    width: 65rem;
+    height: 65rem;
   }
   /*con1*/
   .con1 {
@@ -1864,11 +1873,6 @@ span {
 
 /****************mobile*********************/
 @media all and (max-width: 480px) {
-  .scroll_section_wrap {
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-  }
   .inner h2 {
     font-size: 9.5vw;
   }
@@ -1954,9 +1958,6 @@ span {
     100% {
       transform: rotate(0deg) translate(-50%, -50%);
     }
-  }
-  .ca_inner {
-    height: 100vh;
   }
   .ca_inner .before.on {
     width: 15rem;
