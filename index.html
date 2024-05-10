@@ -8,6 +8,11 @@
     <script src="js/jquery-3.7.0.min.js"></script>
     <!-- <script src="js/jquery-3.6.1.min.js"></script> -->
     <script src="js/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/simplexNoise.js"></script>
+    <script src="js/Noise.js"></script>
+    <script src="js/jquery-animate-css-rotate-scale.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r68/examples/js/controls/OrbitControls.js"></script>
     <link href="main.css" rel="stylesheet" />
     <script src="js/main.js"></script>
 
@@ -34,19 +39,11 @@
         <!--헤더inner시작-->
         <div class="inner">
           <div class="header_wrap">
-            <div></div>
-            <div class="navi">
-              <a class="nv" href="#visual">HOME</a>
-              <a class="nv" href="#list1">ABOUT</a>
-              <a class="nv" href="#list2">PORTFOLIO</a>
-              <a class="nv" href="#list4">CONTACT</a>
-            </div>
             <div class="bars">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
             </div>
-            <div class="barr"></div>
           </div>
           <div class="navi_bar">
             <div><a href="#visual"></a></div>
@@ -84,19 +81,21 @@
       <!--visual 시작(바로 밑)-->
       <div id="visual" class="visual scroll_section">
         <div class="inner">
-          <h2>
-            <span>W</span><span>E</span><span>B</span> <span>P</span
-            ><span>U</span><span>B</span><span>L</span><span>I</span
-            ><span>S</span><span>H</span><span>E</span><span>R</span><br /><span
-              >P</span
-            ><span>O</span><span>R</span><span>T</span><span>F</span
-            ><span>O</span><span>L</span><span>I</span><span>O</span>
-          </h2>
-          <div class="logo_">
-            <div class="p">w</div>
-            <div class="circle" data-splitting>
-              ARCHIVE-ARCHIVE-ARCHIVE-ARCHIVE
+          <div class="canvas_bg"><canvas id="canvas"> </canvas></div>
+          <div class="ca_inner">
+            <div class="canvas-img">
+              <img src="img/black_5.png" alt="랜딩페이지 이미지" />
             </div>
+            <div class="before"></div>
+            <div class="after"></div>
+          </div>
+          <div class="main_text">
+            <p>web publisher</p>
+            <h2>
+              <span>P</span><span>O</span><span>R</span><span>T</span
+              ><span>F</span><span>O</span><span>L</span><span>I</span
+              ><span>O</span>
+            </h2>
           </div>
         </div>
       </div>
@@ -186,6 +185,7 @@
                   홈페이지 : 사운드클라우드
                   <br />
                   작업기간 : 2주
+                  <br />tool : html, css, jquery
                 </p>
                 <p class="work_btn">
                   <span class="pp">계획서</span
@@ -204,6 +204,7 @@
                   홈페이지 : 하리보
                   <br />
                   작업기간 : 3주
+                  <br />tool : html, css, jquery
                 </p>
                 <p class="work_btn">
                   <span class="pp">계획서</span
@@ -222,6 +223,7 @@
                   홈페이지 : 아디다스 공식 홈페이지
                   <br />
                   작업기간 : 1주
+                  <br />tool : html, css, jquery, react
                 </p>
                 <p class="work_btn">
                   <span class="pp">계획서</span
@@ -393,13 +395,10 @@
     </div>
     <!--전체끝(바로위까지)-->
   </body>
-  <script src="js/splitting.js"></script>
-  <script>
-    Splitting();
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     if ($(window).width() < 768) {
+      $(window).off("mousescroll");
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
         spaceBetween: 30,

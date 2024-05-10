@@ -1,6 +1,125 @@
 $(function () {
   let i = 0;
   let isModalOpen = false;
+
+  if (window.innerWidth > 1024) {
+    /*lading_page shape*/
+
+    var renderer = new THREE.WebGLRenderer({
+      canvas: document.getElementById("canvas"),
+      antialias: true,
+      alpha: true,
+    });
+    // 기본 배경색 = 투명 //
+    renderer.setClearColor(0xffffff, 0);
+    renderer.autoClearColor = false;
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    var scene = new THREE.Scene();
+    var camera;
+
+    camera = new THREE.PerspectiveCamera(
+      45,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+
+    camera.position.z = 5;
+
+    var light = new THREE.PointLight();
+    light.position.set(5, 5, 5);
+    scene.add(light);
+
+    var geometry = new THREE.TorusKnotGeometry(0.5, 0.2, 128, 32);
+    var material = new THREE.MeshStandardMaterial({
+      color: 0x999999,
+      roughness: 0.45,
+      metalness: 0.65,
+    });
+    var mesh = new THREE.Mesh(geometry, material);
+
+    mesh.scale.set(1.2, 1.2, 1.2);
+
+    scene.add(mesh);
+
+    var update = function () {
+      var positionAttribute = mesh.geometry.attributes.position;
+
+      mesh.geometry.normalsNeedUpdate = true;
+      positionAttribute.needsUpdate = true;
+      mesh.geometry.computeVertexNormals();
+    };
+
+    function animate() {
+      mesh.rotation.x += 0.01;
+      mesh.rotation.z += 0.02;
+
+      update();
+
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  /*lading page animation*/
+  function firstAnimation() {
+    $("#canvas")
+      .css({ display: "block" })
+      .animate(
+        { opacity: 1, top: "50%" },
+        {
+          duration: 1000,
+          easing: "easeOutExpo",
+          start: function () {},
+          complete: function () {
+            secondAnimation();
+          },
+        }
+      );
+  }
+
+  function secondAnimation() {
+    $(".ca_inner .before").animate(
+      { opacity: "1" },
+      {
+        duration: 300,
+        easing: "easeOutExpo",
+        start: function () {},
+        complete: function () {
+          thirdAnimation();
+          $(".ca_inner .before").addClass("on");
+        },
+      }
+    );
+  }
+  function thirdAnimation() {
+    $(".ca_inner .after").animate(
+      { opacity: "1" },
+      {
+        duration: 300,
+        easing: "easeOutExpo",
+        start: function () {},
+        complete: function () {
+          $(".ca_inner .after").addClass("on");
+          $("#header").stop().animate({ top: "0%" }, 800);
+          setTimeout(function () {
+            $("#visual h2 span").addClass("on");
+          }, 800);
+        },
+      }
+    );
+  }
+
+  firstAnimation();
+
+  /***********************************/
+
   /*bar효과*/
   $(".bars").on("click", function () {
     console.log(i);
@@ -363,6 +482,7 @@ $(function () {
   $(window).on("resize", function () {
     clearTimeout(resize);
     resize_1 = setTimeout(resize);
+    document.location.reload();
   });
   /*여기가 끝(밑에)*/
 });
