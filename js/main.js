@@ -481,11 +481,8 @@ $(function () {
   };
 
   $(window).on("resize", function () {
-    clearTimeout(resize, resizeTimer);
+    clearTimeout(resize);
     resize_1 = setTimeout(resize);
-    resizeTimer = setTimeout(function () {
-      document.location.reload();
-    }, 500);
   });
   /*여기가 끝(밑에)*/
 });
