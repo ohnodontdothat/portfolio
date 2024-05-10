@@ -466,6 +466,7 @@ $(function () {
 
   /*resize이벤트 시작*/
   /*resize*/
+  var resizeTimer;
   let resize = function () {
     $(window).on("resize", function () {
       winsize = window.innerWidth;
@@ -480,9 +481,11 @@ $(function () {
   };
 
   $(window).on("resize", function () {
-    clearTimeout(resize);
+    clearTimeout(resize, resizeTimer);
     resize_1 = setTimeout(resize);
-    document.location.reload();
+    resizeTimer = setTimeout(function () {
+      document.location.reload();
+    }, 500);
   });
   /*여기가 끝(밑에)*/
 });
