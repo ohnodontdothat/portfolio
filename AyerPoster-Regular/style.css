@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Ayer Poster';
+    src: local('Ayer Poster Regular'), local('Ayer-Poster-Regular'),
+        url('AyerPoster-Regular.woff2') format('woff2'),
+        url('AyerPoster-Regular.woff') format('woff'),
+        url('AyerPoster-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

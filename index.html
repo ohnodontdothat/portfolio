@@ -7,14 +7,18 @@
     <link href="img/logo_3d.png" rel="shortcut icon" />
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <link href="main.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/simplexNoise.js"></script>
     <script src="js/Noise.js"></script>
     <script src="js/jquery-animate-css-rotate-scale.js"></script>
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r68/examples/js/controls/OrbitControls.js"></script>
-    <link href="main.css" rel="stylesheet" />
-    <script src="js/main.js"></script>
 
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r68/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
@@ -25,13 +29,12 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;500;600;700;800;900&family=Open+Sans:wght@300&family=Play:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <!--전체-->
+    <!--cursor custom-->
+    <div class="cursor"></div>
+    <!--content start-->
     <div id="wrap" class="wrap scroll_section_wrap">
       <!--헤더시작(바로밑부터)-->
       <div id="header">
@@ -44,46 +47,137 @@
               <div class="bar"></div>
             </div>
           </div>
-          <div class="navi_bar">
-            <div><a href="#visual"></a></div>
-            <div><a href="#list1"></a></div>
-            <div><a href="#list2"></a></div>
-            <div><a href="#list3"></a></div>
-            <div><a href="#list4"></a></div>
-          </div>
-          <div class="side_menu">
-            <div class="side_inner">
-              <div class="bg-blur">
-                <img src="img/logo_3d.png" alt="로고이미지" />
-              </div>
-              <ul class="menu">
-                <li>
-                  <span>01</span>
-                  <p><a href="#visual">HOME</a></p>
-                </li>
-                <li>
-                  <span>02</span>
-                  <p><a href="#list1">About</a></p>
-                </li>
-                <li>
-                  <span>03</span>
-                  <p><a href="#list2">Portfolio</a></p>
-                </li>
-                <li>
-                  <span>04</span>
-                  <p><a href="#list4">CONTACT</a></p>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
         <!--헤더inner끝(바로위까지)-->
+      </div>
+      <div class="side_menu">
+        <div class="side_inner">
+          <ul class="menu">
+            <li>
+              <a href="#visual"><span>01</span>HOME</a>
+            </li>
+            <li>
+              <a href="#list1"><span>02</span>ABOUT</a>
+            </li>
+            <li>
+              <a href="#list2"> <span>03</span>PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="#list4"><span>04</span>CONTACT</a>
+            </li>
+          </ul>
+          <div class="blob">
+            <svg
+              class="s1"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000"
+                d="M41.1,-14.2C47,4.7,41.1,26.6,23.1,42.1C5.1,57.6,-25,66.8,-46.5,53.6C-68,40.4,-80.8,5,-71.6,-18.5C-62.4,-42,-31.2,-53.7,-6.8,-51.5C17.6,-49.3,35.2,-33.2,41.1,-14.2Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+            <svg
+              class="s2"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000000"
+                d="M41.9,-74.4C47.8,-61.4,41.6,-38.8,44.3,-23.1C47,-7.4,58.6,1.3,60.9,11.1C63.2,21,56.2,31.8,46.3,36.2C36.4,40.6,23.6,38.5,11.4,44.9C-0.8,51.3,-12.3,66.2,-22.7,67.6C-33.1,69,-42.3,56.8,-51,45.1C-59.8,33.4,-68,22.2,-70.2,9.8C-72.4,-2.6,-68.7,-16.1,-60.4,-24.9C-52.2,-33.6,-39.4,-37.5,-28.6,-48.2C-17.8,-58.9,-8.9,-76.5,4.6,-83.6C18,-90.6,36,-87.3,41.9,-74.4Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+            <svg
+              class="s3"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000"
+                d="M48.3,-10.6C58,14.4,58.3,47.5,39.8,62.9C21.2,78.3,-16.2,76,-40,58C-63.8,40,-74,6.3,-65.1,-17.5C-56.2,-41.3,-28.1,-55.1,-4.4,-53.7C19.3,-52.2,38.5,-35.5,48.3,-10.6Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+            <svg
+              class="s4"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000000"
+                d="M58.9,-55C72.9,-44.9,78.4,-22.5,74.7,-3.8C70.9,14.9,57.8,29.8,43.8,38.7C29.8,47.6,14.9,50.6,0.5,50.1C-14,49.6,-27.9,45.8,-41.6,36.9C-55.3,27.9,-68.8,14,-73.1,-4.3C-77.4,-22.6,-72.6,-45.2,-58.9,-55.3C-45.2,-65.4,-22.6,-63,-0.1,-62.9C22.5,-62.8,44.9,-65.1,58.9,-55Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+            <svg
+              class="s5"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000000"
+                d="M38.8,-57.8C48.1,-46.5,52.2,-32.4,51.6,-20.1C50.9,-7.9,45.5,2.6,42.3,14.2C39.1,25.7,38.2,38.5,31.5,48.9C24.8,59.3,12.4,67.5,-3.4,72.2C-19.2,76.9,-38.4,78,-47.2,68.3C-56.1,58.6,-54.7,37.9,-52.8,22.2C-51,6.5,-48.8,-4.3,-44.2,-13.1C-39.7,-22,-32.8,-28.8,-25,-40.6C-17.3,-52.4,-8.6,-69.2,3,-73.4C14.7,-77.5,29.4,-69.1,38.8,-57.8Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+
+            <svg
+              class="s6"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000000"
+                d="M31.5,-49.1C38.9,-37.9,41.8,-26.2,41,-16.2C40.2,-6.3,35.8,2,31.6,8.8C27.4,15.7,23.3,21.1,18.1,33.3C12.8,45.5,6.4,64.5,-2.6,68.1C-11.7,71.8,-23.4,60.1,-34.4,49.7C-45.3,39.4,-55.4,30.3,-57,19.8C-58.7,9.3,-51.8,-2.7,-50.7,-19.6C-49.5,-36.5,-53.9,-58.4,-46.4,-69.6C-38.9,-80.7,-19.5,-81.1,-3.7,-76C12,-70.8,24,-60.2,31.5,-49.1Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+            <svg
+              class="s7"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000000"
+                d="M26.1,-34.8C33.8,-30.4,39.9,-22.7,48.5,-12C57.1,-1.4,68.2,12.2,70.3,28.1C72.3,44,65.4,62.1,52.1,65C38.9,67.9,19.5,55.5,5.6,47.8C-8.2,40,-16.4,36.9,-29.5,34C-42.6,31.1,-60.7,28.3,-69.8,18.4C-78.9,8.5,-79,-8.6,-74.8,-25.2C-70.7,-41.8,-62.2,-57.9,-49,-60.5C-35.9,-63.1,-17.9,-52.1,-4.3,-46.2C9.2,-40.2,18.5,-39.2,26.1,-34.8Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+            <svg
+              class="s8"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="#000000"
+                d="M27.5,-37.2C32.2,-28.8,30.3,-16.9,31.5,-6.1C32.7,4.6,37.1,14.3,34.6,21.2C32.1,28.2,22.7,32.5,10.7,42.6C-1.3,52.7,-16.1,68.6,-30.8,69.7C-45.5,70.8,-60.2,57,-59.7,42.1C-59.2,27.2,-43.6,11.1,-35.4,-1.2C-27.2,-13.6,-26.5,-22.2,-21.9,-30.6C-17.2,-39.1,-8.6,-47.3,1.4,-49C11.4,-50.6,22.8,-45.7,27.5,-37.2Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+            <span class="c1 dot"></span>
+            <span class="c2 dot"></span>
+            <span class="c3 dot"></span>
+            <span class="c4 dot"></span>
+            <span class="c5 dot"></span>
+            <span class="c6 dot"></span>
+            <span class="c7 dot"></span>
+            <span class="c8 dot"></span>
+            <span class="c9 dot"></span>
+            <span class="c10 dot"></span>
+            <span class="c11 dot"></span>
+            <span class="c12 dot"></span>
+          </div>
+        </div>
       </div>
       <!--헤더끝(바로위까지)-->
       <!--visual 시작(바로 밑)-->
       <div id="visual" class="visual scroll_section">
         <div class="inner">
-          <div class="canvas_bg"><canvas id="canvas"> </canvas></div>
+          <div class="canvas_bg">
+            <canvas id="canvas"> </canvas>
+          </div>
           <div class="ca_inner">
             <div class="canvas-img">
               <img src="img/black_5.png" alt="랜딩페이지 이미지" />
@@ -102,56 +196,103 @@
         </div>
       </div>
       <!--visual 끝(바로 위)-->
-
+      <!--추가-->
       <!--con1 start-->
-      <div id="list1" class="con1 con scroll_section">
+      <div id="list1" class="con1 con">
         <div class="con1_inner inner">
-          <h2>About<br /><span>Me</span></h2>
-          <div class="profile">
-            <div class="profile_left">
-              <img src="img/me.png" alt="본인의 캐릭터" />
+          <div class="title-profile">
+            <div id="scroll-h1" class="a-title">
+              <h1>
+                INTERACTIVE PUBLISHER
+                <div class="a-circle">
+                  <div id="a-circle-i" class="a-circle-i">hello</div>
+                </div>
+                ABOUT ME
+              </h1>
             </div>
-            <div class="profile_right">
-              <div class="name">
-                <h3>왕지우</h3>
-                <p class="birth">1997. 06. 04</p>
+            <div class="profile">
+              <div class="profile_right">
+                <div class="strong">
+                  <div>
+                    <h2>
+                      코드<span>와</span> 디자인<span>을 조화롭게</span>
+                      결합<span>하여</span>
+                    </h2>
+                  </div>
+                  <div>
+                    <h2>
+                      <span>사람들에게</span> 영감<span>을 주는</span> 퍼블리셔
+                    </h2>
+                  </div>
+                  <div>
+                    <h2>왕지우<span>입니다.</span></h2>
+                  </div>
+                </div>
+                <div class="about">
+                  <div class="age-img">
+                    <p>1<br />9</p>
+                    <div class="img-bg">
+                      <img src="img/me.png" alt="아바타" />
+                    </div>
+                    <p>9<br />7</p>
+                  </div>
+                  <div class="timeline">
+                    <div class="timeline-content">
+                      <p><span>2020.02</span><br />운전면허증 2종</p>
+                      <p><span>2020.11</span><br />컴퓨터활용능력 2급</p>
+
+                      <p><span>2020.12</span><br />GTQ 1급</p>
+                      <p>
+                        <span>2023.06</span><br />자바기반 웹프레임워크 개발자
+                        양성과정
+                      </p>
+                      <p><span>2023.12</span><br />웹디자인기능사</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="skills-inner">
+              <p>publishing skills</p>
+              <div class="carousel">
+                <div class="im">I work with</div>
+                <div class="skill_wrap">
+                  <div class="skill">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Javascript</p>
+                    <p>Jquery</p>
+                    <p>React</p>
+                    <p>Gnu Board</p>
+                    <p>Photoshop</p>
+                    <p>Illustrater</p>
+                    <p>Abobe XD</p>
+                  </div>
+                </div>
+              </div>
+              <div class="appeal">
                 <p>
-                  안녕하세요! 내일을 위해 나아가는 <br />신입 퍼블리셔가
-                  되겠습니다!<br /><span
-                    ><a href="resume.hwp" download="이력서_왕지우.hwp"
-                      >자기소개서 다운로드!</a
-                    ></span
-                  >
+                  "지식과 자격증을 토대로 한 나의 역량을 믿고,<br />
+                  더 나아가기 위해 노력할 것입니다.<br />제 포트폴리오에서 그
+                  모습을 확인해주세요."
                 </p>
               </div>
-              <div class="cer">
-                <h3>CERTIFICATE</h3>
-                <p>
-                  <span>2020.02&nbsp;&nbsp;&nbsp;운전면허증 2종</span>
-                  <br /><span>2020.11&nbsp;&nbsp;&nbsp;컴퓨터활용능력 2급</span>
-                  <br /><span>2020.12&nbsp;&nbsp;&nbsp;GTQ 1급</span>
-                  <br /><span
-                    >2023.06&nbsp;&nbsp;&nbsp;자바기반 웹프레임워크 개발자
-                    양성과정</span
-                  >
-                  <br /><span>2023.12&nbsp;&nbsp;&nbsp;웹디자인기능사</span>
-                </p>
-              </div>
-              <div class="skills">
-                <img
-                  src="img/skills.png"
-                  alt="가능 기능을 표시한 카드 형태의 이미지"
-                />
-              </div>
+            </div>
+            <div class="icons">
+              <img src="img/black_1.png" alt="아이콘1" />
+              <img src="img/black_10.png" alt="아이콘1" />
+              <img src="img/black_13.png" alt="아이콘1" />
             </div>
           </div>
         </div>
       </div>
       <!--con1 end-->
       <!--con2 start-->
-      <div id="list2" class="con2 con scroll_section">
+      <div id="list2" class="con2 con">
         <div class="modal_box">
-          <div class="wo_mo_wrap">
+          <div class="mo_wrap">
             <div class="modal_1 modal">
               <div class="content">
                 <div class="mo_con">
@@ -174,76 +315,292 @@
                 </div>
               </div>
             </div>
+            <div class="modal_4 modal">
+              <div class="content">
+                <div class="mo_con">
+                  <img src="img/CJENM_1.png" />
+                  <img src="img/CJENM_2.png" />
+                </div>
+              </div>
+            </div>
           </div>
           <button id="close_1">&times;</button>
         </div>
-        <div class="con2_inner inner">
-          <h2>My<br /><span>Works</span></h2>
-
-          <div class="works">
-            <div class="work_1 work">
-              <div class="work_p">
-                <p>
-                  홈페이지 : 사운드클라우드
-                  <br />
-                  작업기간 : 2주
-                  <br />tool : html, css, jquery
-                </p>
-                <p class="work_btn">
-                  <span class="pp">계획서</span
-                  ><span class="ph"
-                    ><a href="https://ohnodontdothat.github.io/soundcloud/"
-                      >홈페이지</a
-                    ></span
-                  >
-                </p>
+        <div class="con2-inner">
+          <div class="bg-text">
+            <div class="txt-box">
+              <div class="box-over">
+                <div class="tb-inner">
+                  <span>CJ ENM</span>
+                  <span>movie</span>
+                  <span>CJ ENM</span>
+                  <span>movie</span>
+                  <span>CJ ENM</span>
+                  <span>movie</span>
+                </div>
+                <div class="tb-inner">
+                  <span>adidas</span>
+                  <span>adidas</span>
+                  <span>adidas</span>
+                  <span>adidas</span>
+                  <span>adidas</span>
+                  <span>adidas</span>
+                </div>
+                <div class="tb-inner">
+                  <span>haribo</span>
+                  <span>haribo</span>
+                  <span>haribo</span>
+                  <span>haribo</span>
+                  <span>haribo</span>
+                  <span>haribo</span>
+                </div>
+                <div class="tb-inner">
+                  <span>soundcloud</span>
+                  <span>soundcloud</span>
+                  <span>soundcloud</span>
+                  <span>soundcloud</span>
+                </div>
               </div>
-              <img src="img/mockup_1.png" alt="첫번째 홈페이지 목업" />
             </div>
-            <div class="work_2 work">
-              <div class="work_p">
-                <p>
-                  홈페이지 : 하리보
-                  <br />
-                  작업기간 : 3주
-                  <br />tool : html, css, jquery
-                </p>
-                <p class="work_btn">
-                  <span class="pp">계획서</span
-                  ><span class="ph"
-                    ><a href="https://ohnodontdothat.github.io/haribo/"
-                      >홈페이지</a
-                    ></span
-                  >
-                </p>
+            <div class="txt-box">
+              <div class="box-over" style="transform: translateX(-30%)">
+                <div class="tb-inner">
+                  <span>entertainmet</span>
+                  <span>media</span>
+                  <span>renewal</span>
+                  <span>page</span>
+                </div>
+                <div class="tb-inner">
+                  <span>sports</span>
+                  <span>wear</span>
+                  <span>shopping</span>
+                  <span>mall</span>
+                </div>
+                <div class="tb-inner">
+                  <span>jelly</span>
+                  <span>industry</span>
+                  <span>renewal</span>
+                  <span>homepage</span>
+                </div>
+                <div class="tb-inner">
+                  <span>music</span>
+                  <span>platform</span>
+                  <span>renewal</span>
+                  <span>homepage</span>
+                </div>
               </div>
-              <img src="img/mockup_2.png" alt="두번째 홈페이지 목업" />
             </div>
-            <div class="work_3 work">
-              <div class="work_p">
+            <div class="txt-box no-animation">
+              <div class="box-over" style="height: auto">
+                <div class="tb-inner">
+                  <p>@2024</p>
+                  <p>@2024</p>
+                  <p>@2023</p>
+                  <p>@2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-work">
+            <div class="work">
+              <div class="work-inner">
+                <div class="work-inside">
+                  <img src="img/thumb_soundcloud.PNG" />
+                  <div class="work-back">
+                    <div class="btn-box">
+                      <a
+                        href="https://ohnodontdothat.github.io/soundcloud/"
+                        target="_blank"
+                      >
+                        View Site
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </a>
+                      <p class="pp">
+                        Code Review
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <p>soundcloud</p>
                 <p>
-                  홈페이지 : 아디다스 공식 홈페이지
-                  <br />
-                  작업기간 : 1주
-                  <br />tool : html, css, jquery, react
-                </p>
-                <p class="work_btn">
-                  <span class="pp">계획서</span
-                  ><span class="ph"
-                    ><a href="https://ohnodontdothat.github.io/"
-                      >홈페이지</a
-                    ></span
-                  >
+                  <span>#HTML</span> <span>#CSS</span><span>#JAVASCRIPT </span
+                  ><span>#JQUERY</span>
                 </p>
               </div>
-              <img src="img/mockup_3.png" alt="세번째 홈페이지 목업" />
+            </div>
+            <div class="work">
+              <div class="work-inner">
+                <div class="work-inside">
+                  <img src="img/thumb_haribo.PNG" />
+                  <div class="work-back">
+                    <div class="btn-box">
+                      <a
+                        href="https://ohnodontdothat.github.io/haribo/"
+                        target="_blank"
+                      >
+                        View Site
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </a>
+                      <p class="pp">
+                        Code Review
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <p>haribo</p>
+                <p>
+                  <span>#HTML</span> <span>#CSS</span><span>#JAVASCRIPT </span
+                  ><span>#JQUERY</span>
+                </p>
+              </div>
+            </div>
+            <div class="work">
+              <div class="work-inner">
+                <div class="work-inside">
+                  <img src="img/thumb_adidas.PNG" />
+                  <div class="work-back">
+                    <div class="btn-box">
+                      <a
+                        href="https://ohnodontdothat.github.io/"
+                        target="_blank"
+                      >
+                        View Site
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </a>
+                      <p class="pp">
+                        Code Review
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <p>adidas</p>
+                <p><span>#HTML</span> <span>#CSS</span><span>#REACT </span></p>
+              </div>
+            </div>
+            <div class="work">
+              <div class="work-inner">
+                <div class="work-inside">
+                  <img src="img/thumb_cjenm.PNG" />
+                  <div class="work-back">
+                    <div class="btn-box">
+                      <a
+                        href="https://ohnodontdothat.github.io/CJ_ENM/"
+                        target="_blank"
+                      >
+                        View Site
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </a>
+                      <p class="pp">
+                        Code Review
+                        <svg
+                          viewBox="0 0 105 62"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 31H103M103 31L73.5 1.5M103 31L73.5 60.5"
+                            stroke="#010202"
+                            stroke-width="2"
+                            vector-effect="non-scaling-stroke"
+                          ></path>
+                        </svg>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <p>CJ-ENM</p>
+                <p>
+                  <span>#HTML</span> <span>#CSS</span><span>#JAVASCRIPT </span
+                  ><span>#JQUERY</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <!--con2 end-->
       <!--con3 start-->
-      <div id="list3" class="con3 con scroll_section section_4">
+      <div id="list3" class="con3 con">
         <div class="con3_inner inner">
           <div class="de_modal">
             <div id="arrows">
@@ -258,23 +615,23 @@
               <div class="div_wrap">
                 <div class="mo_bg">
                   <div class="poster">
-                    <img src="img/poster_1.png" alt="빈티지 포스터" />
+                    <img src="img/poster_2.png" alt="패션 잡지 포스터 작업" />
                   </div>
                   <div class="mo_text">
-                    <p>빈티지 포스터</p>
-                    <div>
-                      <img src="img/ai.png" alt="일러스트레이터 사용" />
-                      <img src="img/photoshop.png" alt="포토샵 사용" />
-                    </div>
+                    <p>
+                      텍스트와 이미지를 조합하여 트렌디하고 세련된 디자인을
+                      구현하여 패션 잡지 표지를 제작.
+                    </p>
+                    <img src="img/icon_ps.png" alt="포토샵 사용" />
                   </div>
                 </div>
                 <div class="mo_bg">
                   <div class="poster">
-                    <img src="img/poster_3.png" alt="패션 잡지 포스터 작업" />
+                    <img src="img/poster_3.png" alt="화장품 포스터 작업" />
                   </div>
                   <div class="mo_text">
-                    <p>화장품 광고 포스터</p>
-                    <img src="img/photoshop.png" alt="포토샵 사용" />
+                    <p>수분크림의 특징을 표현한 화장품 포스터 제작.</p>
+                    <img src="img/icon_ps.png" alt="포토샵 사용" />
                   </div>
                 </div>
                 <div class="mo_bg">
@@ -282,8 +639,23 @@
                     <img src="img/poster_5.png" alt="3D 포스터 작업" />
                   </div>
                   <div class="mo_text">
-                    <p>3D 포스터</p>
-                    <img src="img/ai.png" alt="일러스트레이터 사용" />
+                    <p>
+                      입체적인 재질과 특징을 살려 제작한 세일 판촉 포스터 제작.
+                    </p>
+                    <img src="img/icon_ai.png" alt="일러스트레이터 사용" />
+                  </div>
+                </div>
+                <div class="mo_bg">
+                  <div class="mo_text">
+                    <p>피그마를 통해 제작한 UI/UX 디자인.</p>
+                    <div>
+                      <img src="img/figma_logo.png" alt="피그마 사용" />
+                    </div>
+                  </div>
+                  <div class="poster">
+                    <img src="img/Frame 1.png" alt="UI/UX 디자인" />
+                    <img src="img/Frame 2.png" alt="UI/UX 디자인" />
+                    <img src="img/Frame 3.png" alt="UI/UX 디자인" />
                   </div>
                 </div>
                 <div class="mo_bg">
@@ -291,52 +663,63 @@
                     <img src="img/poster_4.png" alt="팝아트 포스터 작업" />
                   </div>
                   <div class="mo_text">
-                    <p>팝아트 포스터</p>
+                    <p>색감에 중점을 둔 팝 아트 포스터 제작.</p>
                     <div>
-                      <img src="img/ai.png" alt="일러스트레이터 사용" />
+                      <img src="img/icon_ai.png" alt="일러스트레이터 사용" />
                     </div>
-                  </div>
-                </div>
-                <div class="mo_bg">
-                  <div class="poster">
-                    <img src="img/poster_2.png" alt="패션 잡지 포스터 작업" />
-                  </div>
-                  <div class="mo_text">
-                    <p>패션 잡지 포스터</p>
-                    <img src="img/photoshop.png" alt="포토샵 사용" />
                   </div>
                 </div>
               </div>
             </div>
             <button id="close_2">&times;</button>
           </div>
-          <div class="design_wrap mySwiper">
-            <div class="design swiper-wrapper">
-              <div class="de_bg swiper-slide">
-                <img src="img/poster_1.png" alt="다섯번째 디자인 작업 큰화면" />
-              </div>
-              <div class="de_bg swiper-slide">
-                <img src="img/poster_3.png" alt="네번째 디자인 작업 큰화면" />
-              </div>
-              <div class="de_bg swiper-slide">
-                <img src="img/poster_5.png" alt="두번째 디자인 작업 큰화면" />
-              </div>
-              <div class="de_bg swiper-slide">
-                <img src="img/poster_4.png" alt="첫번째 디자인 작업 큰화면" />
-              </div>
-              <div class="de_bg swiper-slide">
-                <img src="img/poster_2.png" alt="세번째 디자인 작업 큰화면" />
+          <div class="de_carousel">
+            <div class="de-text">
+              <h2>Works.</h2>
+              <div class="de-arrow">
+                <div class="pre-left">
+                  <span class="material-symbols-outlined"> arrow_left </span>
+                </div>
+                <div class="ne-right">
+                  <span class="material-symbols-outlined"> arrow_right </span>
+                </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+
+            <div class="design_wrap mySwiper">
+              <div class="design swiper-wrapper">
+                <div class="de_bg swiper-slide">
+                  <img src="img/poster_2.png" alt="첫번째 디자인 작업 큰화면" />
+                  <p>MAGAZINE MAIN</p>
+                </div>
+                <div class="de_bg swiper-slide">
+                  <img src="img/poster_3.png" alt="두번째 디자인 작업 큰화면" />
+                  <p>COSMETIC</p>
+                </div>
+                <div class="de_bg swiper-slide">
+                  <img src="img/poster_5.png" alt="세번째 디자인 작업 큰화면" />
+                  <p>3D POSTER</p>
+                </div>
+                <div class="de_bg swiper-slide">
+                  <img src="img/poster_1.png" alt="네번째 디자인 작업 큰화면" />
+                  <p>UI/UX DESIGN</p>
+                </div>
+                <div class="de_bg swiper-slide">
+                  <img
+                    src="img/poster_4.png"
+                    alt="다섯번째 디자인 작업 큰화면"
+                  />
+                  <p>POP ART POSTER</p>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
-          <h2><span>Keep Watching!</span></h2>
-          <h2><span>More Works</span></h2>
         </div>
       </div>
       <!--con3 end-->
       <!--con4 start-->
-      <div id="list4" class="con4 con scroll_section section_5">
+      <div id="list4" class="con4 con">
         <div class="con4_inner inner">
           <div class="con4_wrap">
             <h2 style="font-weight: normal">
@@ -397,10 +780,9 @@
     </div>
     <!--전체끝(바로위까지)-->
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  <!-- <script>
     if ($(window).width() < 768) {
-      $(window).off("mousescroll");
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
         spaceBetween: 30,
@@ -413,5 +795,5 @@
     } else {
       $(window).off("swiper");
     }
-  </script>
+  </script> -->
 </html>
